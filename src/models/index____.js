@@ -6,6 +6,7 @@ const db={};
 
 db.mongoose = mongoose;
 db.course = require('./course.model');
+
 //db.tutorials = require("./tutorial.model.js")(mongoose);
 
 module.exports = db;

@@ -17,6 +17,8 @@
     "nodemon": "^2.0.9"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.1",
+    "@material-ui/lab": "^4.0.0-alpha.60",
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "concurrently": "^6.2.0",

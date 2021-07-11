@@ -4,6 +4,7 @@ import React, {useEffect, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import coursesHeader from '../tableHeads/coursesHeader';
+import CoursesList from '../components/axios_CoursesList.component';
 import TableData from './TableData.component';
 
 const columnsData = [
@@ -54,13 +55,16 @@ const columnsData = [
   
 ];
 
-const CoursesList=()=> {
+const Parent=()=> {
  const [courses, setCourses]  = useState([]);
  const [count, setCount]  = useState(0);
 
 useEffect(()=>{
  fetchCourses();
  //fetchCoursesHeader();
+ if(url==getcorse){
+   fefetchCourses
+ }
 },[]);
 
 const fetchCourses = async()=>{
@@ -91,4 +95,4 @@ const fetchCourses = async()=>{
   );
 }
 
-export default CoursesList;
+export default Parent;

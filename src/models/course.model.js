@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 
-const Course = mongoose.model(
-  "Course",
-  new mongoose.Schema({
+const Course = mongoose.model("Course",
+  {
    courseid: Number,
    code: String,
    name: String,
@@ -13,7 +12,8 @@ const Course = mongoose.model(
    project: String,
    studentnum: Number,
    teachers:  String,
-  })
+  }
 );
 
 module.exports = Course;
+
