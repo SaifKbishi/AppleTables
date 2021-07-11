@@ -1,8 +1,6 @@
 /**Saif K. and Foad A. */
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-
 import coursesHeader from '../tableHeads/coursesHeader';
 import TableData from './TableData.component';
 
@@ -60,7 +58,6 @@ const CoursesList=()=> {
 
 useEffect(()=>{
  fetchCourses();
- //fetchCoursesHeader();
 },[]);
 
 const fetchCourses = async()=>{
@@ -74,15 +71,13 @@ const fetchCourses = async()=>{
   "v": 2.4
   }
  const req=await axios.get(`http://localhost:3009/v1/allcourses/`);
- 
+ console.log('77 ',req.data);
  setCourses(req.data); 
  setCount(req.data.length);
 }
 
   let courseData = {columnsData , courses}
   return (
-   console.log('hello2'),
-   console.log('103 req.data',courses),
    <div>
     <h3>Courses Table</h3>
     <TableData {...courseData} />

@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <h3>tables here</h3>
       
-      {/* <UsersList /> */}
+      <UsersList />
       <hr/>      
       <CoursesList />
     </div>

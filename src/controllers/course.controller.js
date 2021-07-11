@@ -1,9 +1,7 @@
-// const db = require('../models');
-// const Course = db.Course;
 const Course = require('../models/course.model');
 
 const findAll = async (req, res)=>{
- console.log('37 findAll, course controllers') 
+ console.log('37 findAll, course controllers')
  try{
   const allCourses = await Course.find({});
   res.status(200).send(allCourses);

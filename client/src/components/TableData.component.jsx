@@ -1,4 +1,9 @@
-/**Saif K. and Foad A. */
+/**Saif K. and Foad A. 
+ * this component is the display for each table sent via props.
+ * two parameters are important: columns & dataList
+ * columns includes the table header
+ * dataList includes the data of the entity we are calling (courses, users etc.)
+*/
 import React, {useEffect, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -28,7 +33,7 @@ const useStyles = makeStyles((theme)=>({
 }));
 
 export default function TableData(props) {
-  console.log('props: ', props);
+  console.log('props 31: ', props);
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -79,7 +84,7 @@ export default function TableData(props) {
         </Table>
       </TableContainer>    
       <div className={classes.root}>
-        <Pagination count={Math.floor(count/rowsPerPage)} page={page} onChange={handleChange} />      
+        <Pagination count={Math.floor((dataList.length)/rowsPerPage)} page={page} onChange={handleChange} />      
       </div>
     </Paper>
   );

@@ -7,6 +7,8 @@ app.use(cors());
 app.use(express.json());
 const courseRoutes = require('./src/routes/course.routes');
 app.use('/v1', courseRoutes);
+const userRoutes = require('./src/routes/user.routes');
+app.use('/v1', userRoutes);
 
 require('./src/config/mongoose'); 
 

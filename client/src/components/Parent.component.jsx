@@ -62,9 +62,9 @@ const Parent=()=> {
 useEffect(()=>{
  fetchCourses();
  //fetchCoursesHeader();
- if(url==getcorse){
-   fefetchCourses
- }
+//  if(url==getcorse){
+//    fefetchCourses
+//  }
 },[]);
 
 const fetchCourses = async()=>{

@@ -87,22 +87,21 @@ const UsersList = () => {
   
 ];
 
-
  useEffect(()=>{
   fetchUsers()
  },[]);
 
- const handleChange = (event, value) => {
-  setPage(value);
- };
 
- const fetchUsers = async()=>{   
+ const fetchUsers = async()=>{  
+   console.log('hello world'); 
   const req=await axios.get(`http://localhost:3009/v1/allusers/`);
+  console.log('101 users',req.data);
   setUsers(req.data);  
   setCount(req.data.length);
  }
  let usersData = {columnsData, users}
  return (
+  console.log('hello world2'),
   <div>
     <h3>Users Table</h3>
     <TableData {...usersData} />

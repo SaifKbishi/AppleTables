@@ -4,7 +4,7 @@ const users = require('../controllers/user.controller');
 console.log('4 from user routes')
 
 //create a new course
-router.post('/', users.createCourse);
+router.post('/createuser', users.createUser);
 
 //add many users
 router.post('/addManyUsers/', (req,res)=>{

@@ -1,7 +1,7 @@
-
 const User = require('../models/user.model');
 
 const findAll = async (req, res)=>{
+console.log('4 findAll, user controllers')
  try{
   const allUsers = await User.find({});
   res.status(200).send(allUsers);
